@@ -1,0 +1,19 @@
+.sinupPage {
+  height: 94vh;
+  padding: 30px 30px;
+  background: #fff;
+  overflow-x: scroll;
+  .titleArea {
+    text-align: center;
+    h1 {font-size: 2rem;}
+  }
+  .signupForm {
+    .form-group {
+      margin: 0 auto 1.5rem auto;
+      max-width: 500px;
+      .form-control {
+        background: #f6f8fa;
+      }
+    }
+  }
+}

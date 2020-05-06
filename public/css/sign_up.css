@@ -1,0 +1,19 @@
+.sinupPage {
+  height: 94vh;
+  padding: 30px 30px;
+  background: #fff;
+  overflow-x: scroll;
+}
+.sinupPage .titleArea {
+  text-align: center;
+}
+.sinupPage .titleArea h1 {
+  font-size: 2rem;
+}
+.sinupPage .signupForm .form-group {
+  margin: 0 auto 1.5rem auto;
+  max-width: 500px;
+}
+.sinupPage .signupForm .form-group .form-control {
+  background: #f6f8fa;
+}
