@@ -1,13 +1,39 @@
 .header {
-  background: gray;
+  background: rgb(0, 183, 207);
   height: 100px;
   width: 100%;
   border-bottom-style: double;
-  margin: 0 0 50px 0;
+  a{
+    color: #fff;
+  }
   .container{
-    .navbar-logo{
-      height: 50px;
-      width: 50px;
+    display: flex;
+    .navbar-brand{
+      margin-left: 50px;
+      font-size: 40px;
+      text-decoration: none;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+      .navbar-logo{
+        height: 50px;
+        width: 50px;
+        margin: 20px 20px 0 0;
+      }
+    }
+    .navbar-menu{
+      position: absolute;
+      right: 50px;
+      .navbar-nav{
+        display: flex;
+        margin: 50px 0 0 0;
+        .nav-item{
+          margin-left: 20px;
+          list-style: none;
+          .nav-link{
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
 }

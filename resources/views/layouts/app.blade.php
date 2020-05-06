@@ -14,24 +14,17 @@
     <link href="{{ asset('css/sign_up.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sign_in.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-    @yield('css')
 </head>
 <body>
-    <header class="header">
+    <header class="header mb20">
         <nav class="navbar">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img class='navbar-logo mt20 ml20' src="{{ asset('images/logo.png') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
+                    {{ config('app.name') }}
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                    </ul>
-                    <ul class="navbar-nav ml-auto">
+                <div class="navbar-menu">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                              <a href="{{ route('create') }}" class='nav-link'>レビューを書く</a>
                         </li>
@@ -39,23 +32,22 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <li class="nav-item">
+                                <a class="nav-link">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -67,17 +59,18 @@
             </div>
         </nav>
     </header>
+
     <main class="main">
     @if (session('flash_message'))
-            <div class="flash_message bg-success text-center py-3 my-0 mb30">
+            <div class="flash_message mb30">
                 {{ session('flash_message') }}
             </div>
     @endif
         @yield('content')
     </main>
 
-    <footer class='footer p20'>
-      <small class='copyright'>StockSound 2020 copyright</small>
+    <footer class='footer'>
+      <div class='copyright'>StockSound 2020 copyright</small>
     </footer>
 </body>
 </html>
