@@ -14,6 +14,7 @@
     <link href="{{ asset('css/sign_up.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sign_in.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 </head>
 <body>
     <header class="header mb20">
@@ -70,7 +71,7 @@
     </main>
 
     <footer class='footer'>
-      <div class='copyright'>StockSound 2020 copyright</small>
+      <div class='copyright'>StockSound 2020 copyright</div>
     </footer>
 </body>
 </html>

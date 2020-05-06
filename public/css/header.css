@@ -1,8 +1,9 @@
 .header {
-  background: #00b7cf;
+  background-color: #00b7cf;
   height: 100px;
   width: 100%;
   border-bottom-style: double;
+  line-height: 100px;
 }
 .header a {
   color: #fff;
@@ -28,10 +29,9 @@
 }
 .header .container .navbar-menu .navbar-nav {
   display: flex;
-  margin: 50px 0 0 0;
 }
 .header .container .navbar-menu .navbar-nav .nav-item {
-  margin-left: 20px;
+  margin-left: 30px;
   list-style: none;
 }
 .header .container .navbar-menu .navbar-nav .nav-item .nav-link {
