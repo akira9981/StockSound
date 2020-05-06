@@ -1,0 +1,11 @@
+.header {
+  background: gray;
+  height: 100px;
+  width: 100%;
+  border-bottom-style: double;
+  position: fixed;
+}
+.header .container .navbar-logo {
+  height: 50px;
+  width: 50px;
+}
