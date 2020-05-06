@@ -34,6 +34,7 @@ class ReviewController extends Controller
                       $data = ['user_id' => \Auth::id(), 'title' => $post['title'], 'body' => $post['body']];
                   }
                   Review::insert($data);
-        return redirect('/');
+
+                  return redirect('/')->with('flash_message', '投稿が完了しました');
     }
 }
