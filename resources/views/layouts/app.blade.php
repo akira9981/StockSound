@@ -14,7 +14,6 @@
     <link href="{{ asset('css/sign_up.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sign_in.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
-
     @yield('css')
 </head>
 <body>
@@ -33,6 +32,9 @@
                     <ul class="navbar-nav mr-auto">
                     </ul>
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                             <a href="{{ route('create') }}" class='nav-link'>レビューを書く</a>
+                        </li>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
