@@ -15,9 +15,10 @@
     <link href="{{ asset('css/sign_in.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
 </head>
 <body>
-    <header class="header mb20">
+    <header class="header">
         <nav class="navbar">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -27,26 +28,37 @@
                 <div class="navbar-menu">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                             <a href="{{ route('create') }}" class='nav-link'>レビューを書く</a>
+                            <a href="{{ route('create') }}" class='nav-link'>
+                                <i class="fas fa-edit"></i>
+                                <div class="nav-text">レビューを書く</div>
+                            </a>
                         </li>
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">
+                                    <i class="fas fa-door-open"></i>
+                                    {{ __('Login') }}
+                                </a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">
+                                        <i class="fas fa-user-plus"></i>
+                                        {{ __('Register') }}
+                                    </a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item">
                                 <a class="nav-link">
+                                    <i class="fas fa-user"></i>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
+                                        <i class="fas fa-door-closed"></i>
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
