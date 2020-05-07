@@ -56,9 +56,9 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link">
+                                <a a href="/" class="nav-link">
                                     <i class="fas fa-user"></i>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    <div class="nav-text">User</div>
                                 </a>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('logout') }}"

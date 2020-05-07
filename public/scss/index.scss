@@ -19,9 +19,85 @@
       height: 80px;
       font-size: 30px;
       font-weight: bold;
-      border: solid 3px ;
+      border: solid 6px ;
       border-radius: 10px;
       margin: 5px;
+    }
+  }
+}
+
+.main-contents{
+  padding: 20px 50px 20px;
+  text-align: center;
+  .card-body{
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    .image-wrapper{
+      height: 150px;
+      width: 100%;
+      background-color: rgba(168, 168, 168, 0.788);
+      border-bottom: solid 1px;
+      .review-image{
+        height: 150px;
+        width: 300px;
+        object-fit: cover;
+      }
+    }
+    .review-title{
+      width: 280px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: left;
+      margin-left: 10px;
+      font-size: 25px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .description{
+      text-align: left;
+      margin-left: 10px;
+      font-size: 15px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .detail-btn{
+      display: inline-block;
+      width: 200px;
+      font-weight: bold;
+      border: solid 1px ;
+      background-color: rgb(87, 87, 87);
+      padding: 5px 0;
+      a{
+        font-weight: 100;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      }
+    }
+  }
+  nav{
+    width: 100%;
+    .pagination{
+      font-size: 25px;
+      color: rgb(0, 0, 0);
+      list-style-type: none;
+      padding: 0;
+      li{
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        border: solid 1px ;
+        background-color: rgb(255, 255, 255);
+        padding: 5px 0;
+        a{
+          color: rgb(108, 168, 218);
+          text-decoration: none;
+        }
+      }
     }
   }
 }

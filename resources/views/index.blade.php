@@ -23,24 +23,23 @@
         </div>
     </div>
 </div>
-<div class="contents">
+<div class="main-contents">
   @foreach($reviews as $review)
-    <div class="card-content">
-        <div class="card">
-            <div class="card-body">
-                @if(!empty($review->image))
-                <div class='image-wrapper'><img class='review-image' src="{{ asset('storage/images/'.$review->image) }}"></div>
-                @else
-                <div class='image-wrapper'><img class='review-image' src="{{ asset('images/guitar.png') }}"></div>
-                @endif
-                <h3 class='h3 review-title'>{{ $review->title }}</h3>
-                <p class='description'>
-                    {{ $review->body }}
-                </p>
-                <a href="{{ route('show', ['id' => $review->id ]) }}" class='detail-btn'>詳細を読む</a>
-            </div>
+    <div class="card-body">
+        @if(!empty($review->image))
+        <div class='image-wrapper'><img class='review-image' src="{{ asset('storage/images/'.$review->image) }}"></div>
+        @else
+        <div class='image-wrapper'><img class='review-image' src="{{ asset('images/noimage.jpg') }}"></div>
+        @endif
+        <h3 class='review-title'>{{ $review->title }}</h3>
+        <p class='description'>
+            {{ $review->body }}
+        </p>
+        <div class="detail-btn">
+            <a href="{{ route('show', ['id' => $review->id ]) }}">詳細を読む</a>
         </div>
     </div>
   @endforeach
+{{ $reviews->links() }}
 </div>
 @endsection
