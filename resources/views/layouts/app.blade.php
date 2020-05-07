@@ -30,7 +30,13 @@
                         <li class="nav-item">
                             <a href="{{ route('create') }}" class='nav-link'>
                                 <i class="fas fa-edit"></i>
-                                <div class="nav-text">レビューを書く</div>
+                                <div class="nav-text">Review</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class='nav-link'>
+                                <i class="fas fa-music"></i>
+                                <div class="nav-text">Stock</div>
                             </a>
                         </li>
                         @guest

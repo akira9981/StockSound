@@ -3,9 +3,24 @@
 @section('content')
 <div class="top-box">
     <div class="top-message">
-      <h1 class="lead">
-        お気に入りの曲を見つけよう。
+      <h1>
+        あなたのお気に入りの曲を見つけよう。
       </h1>
+      <h2><i class="fas fa-headphones"></i>StockSound</h2>
+      <h3>
+        [楽曲レビューサイト]
+        お気に入り曲のレビューを書いてシェアしよう。
+      </h3>
+    </div>
+    <div class="top-manual">
+        <div class="contents">
+            <i class="fas fa-edit"></i>
+            <div class="top-text">レビューを書く</div>
+        </div>
+        <div class="contents">
+            <i class="fas fa-music"></i>
+            <div class="top-text">お気に入りに入れる</div>
+        </div>
     </div>
 </div>
 <div class="contents">
