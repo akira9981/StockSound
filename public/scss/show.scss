@@ -1,0 +1,30 @@
+.show-contents{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  .pagetitle{
+    color: #fff;
+  }
+  .show-body{
+    display: inline-block;
+    width: 80%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: left;
+    .review-main{
+      display: inline-block;
+      width: 300px;
+    }
+    .review-image{
+      display: inline-block;
+      .image{
+        height: 100px;
+        width: 100px;
+      }
+    }
+    .back{
+      text-align: center;
+    }
+  }
+}
