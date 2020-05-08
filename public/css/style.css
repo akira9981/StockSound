@@ -354,3 +354,10 @@ template {
 [hidden] {
   display: none;
 }
+
+.flash_message{
+  background-color: rgb(0, 255, 76);
+  font-size: 25px;
+  text-align: center;
+  padding: 5px;
+}

@@ -81,7 +81,7 @@
     </header>
     <main class="main">
     @if (session('flash_message'))
-            <div class="flash_message mb30">
+            <div class="flash_message">
                 {{ session('flash_message') }}
             </div>
     @endif
