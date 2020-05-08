@@ -16,6 +16,7 @@
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/review.css') }}" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -78,7 +79,6 @@
             </div>
         </nav>
     </header>
-
     <main class="main">
     @if (session('flash_message'))
             <div class="flash_message mb30">
@@ -87,9 +87,8 @@
     @endif
         @yield('content')
     </main>
-
     <footer class='footer'>
-      <div class='copyright'>StockSound 2020 copyright</div>
+    <div class='copyright'>StockSound 2020 copyright</div>
     </footer>
 </body>
 </html>

@@ -1,0 +1,57 @@
+.alert-danger {
+  background-color: #f88c8c;
+}
+.review-contents {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.review-contents .pagetitle {
+  color: #fff;
+}
+.review-contents .review-body {
+  display: inline-block;
+  width: 80%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: left;
+}
+.review-contents .review-body .form-group {
+  margin-bottom: 20px;
+}
+.review-contents .review-body .form-group label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+.review-contents .review-body .form-group .form-control {
+  width: 100%;
+  border-radius: 5px;
+  height: 30px;
+}
+.review-contents .review-body .form-group .description {
+  height: 60px;
+  border: solid 2px;
+  border-style: inset;
+  border-top-style: inset;
+  border-right-style: inset;
+  border-bottom-style: inset;
+  border-left-style: inset;
+}
+.review-contents .review-body .btn-wrapper {
+  display: inline-block;
+}
+.review-contents .review-body .btn-wrapper i {
+  position: absolute;
+  margin: 10px 0 0 10px;
+  color: #fff;
+  font-size: 25px;
+}
+.review-contents .review-body .btn-wrapper .btn-primary {
+  color: #fff;
+  padding: 15px 15px 15px 40px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #005bd1;
+}

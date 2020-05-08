@@ -86,15 +86,15 @@
   list-style-type: none;
   padding: 0;
 }
-.main-contents nav .pagination li {
-  width: 30px;
+.main-contents nav .pagination .page-item {
+  width: 50px;
   height: 30px;
   display: inline-block;
   border: solid 1px;
   background-color: #fff;
   padding: 5px 0;
 }
-.main-contents nav .pagination li a {
-  color: #6ca8da;
+.main-contents nav .pagination .page-item a {
+  color: #00b7cf;
   text-decoration: none;
 }
