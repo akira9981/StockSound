@@ -3,7 +3,7 @@
 @section('content')
 <div class="signinPage">
   <div class="container">
-    <h2 class="title">StockSound Sign in</h2>
+    <h2 class="title">StockSound Login</h2>
     <div class="text-center m-3">or</div>
     <div class="text-center">
       <p class="acountPage_link"><a href="{{ route('register') }}">Create an Account</a></p>
@@ -31,7 +31,7 @@
       </div>
 
       <div class="form-group text-center">
-        <input type="submit" name="commit" value="Sign in" class="loginBtn" data-disable-with="Sign in">
+        <input type="submit" name="commit" value="Login" class="loginBtn" data-disable-with="Login">
       </div>
     </form>
   </div>
