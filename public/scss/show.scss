@@ -8,22 +8,24 @@
   .show-body{
     display: inline-block;
     width: 80%;
+    margin-bottom: 50px;
     padding: 20px;
     border-radius: 5px;
     background-color: #fff;
-    text-align: left;
-    .review-main{
-      display: inline-block;
-      width: 300px;
-    }
     .review-image{
-      display: inline-block;
+      width: 100%;
       .image{
-        height: 100px;
-        width: 100px;
+        height: 500px;
+        width: 500px;
+        object-fit: cover;
       }
     }
+    .review-main{
+      width: 100%;
+      text-align: left;
+    }
     .back{
+      display: block;
       text-align: center;
     }
   }

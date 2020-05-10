@@ -9,22 +9,24 @@
 .show-contents .show-body {
   display: inline-block;
   width: 80%;
+  margin-bottom: 50px;
   padding: 20px;
   border-radius: 5px;
   background-color: #fff;
-  text-align: left;
-}
-.show-contents .show-body .review-main {
-  display: inline-block;
-  width: 300px;
 }
 .show-contents .show-body .review-image {
-  display: inline-block;
+  width: 100%;
 }
 .show-contents .show-body .review-image .image {
-  height: 100px;
-  width: 100px;
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+}
+.show-contents .show-body .review-main {
+  width: 100%;
+  text-align: left;
 }
 .show-contents .show-body .back {
+  display: block;
   text-align: center;
 }
