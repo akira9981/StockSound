@@ -1,17 +1,41 @@
 .sinupPage {
-  padding: 30px 30px;
-  background: #fff;
-  overflow-x: scroll;
-  .titleArea {
-    text-align: center;
-    h1 {font-size: 2rem;}
-  }
-  .signupForm {
-    .form-group {
-      margin: 0 auto 1.5rem auto;
-      max-width: 500px;
-      .form-control {
-        background: #f6f8fa;
+  width: 100%;
+  text-align: center;
+  .container{
+    display: inline-block;
+    width: 80%;
+    margin: 50px 0;
+    background-color: #fff;
+    padding: 10px;
+    .titleArea {
+      text-align: center;
+    }
+    .signupForm {
+      display: inline-block;
+      width: 200px;
+      .form-group {
+        max-width: 500px;
+        margin: 20px 0;
+        .form-control {
+          background: #f6f8fa;
+          width: 200px;
+        }
+      }
+      .signupBtn{
+        padding: 12px;
+        width: 200px;
+        border-radius: 21px;
+        background: #4fddec;
+        color: #fff;
+        text-align: center;
+        border: none;
+        margin-top: 20px;
+        opacity: 1;
+        transition: opacity .5s;
+        cursor: pointer;
+        &:hover {
+          opacity: .7;
+        }
       }
     }
   }

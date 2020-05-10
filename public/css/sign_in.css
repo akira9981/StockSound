@@ -1,16 +1,16 @@
 .signinPage {
   width: 100%;
-  height: 100%;
   text-align: center;
 }
 .signinPage .container {
   display: inline-block;
   width: 80%;
-  margin-top: 50px;
+  margin: 50px 0;
   background-color: #fff;
 }
 .signinPage .container .title {
   color: #000;
+  font-size: 30px;
 }
 .signinPage .container .new_user .form-group {
   max-width: 500px;

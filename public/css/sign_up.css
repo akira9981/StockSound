@@ -1,18 +1,42 @@
 .sinupPage {
-  padding: 30px 30px;
-  background: #fff;
-  overflow-x: scroll;
-}
-.sinupPage .titleArea {
+  width: 100%;
   text-align: center;
 }
-.sinupPage .titleArea h1 {
-  font-size: 2rem;
+.sinupPage .container {
+  display: inline-block;
+  width: 80%;
+  margin: 50px 0;
+  background-color: #fff;
+  padding: 10px;
 }
-.sinupPage .signupForm .form-group {
-  margin: 0 auto 1.5rem auto;
+.sinupPage .container .titleArea {
+  text-align: center;
+}
+.sinupPage .container .signupForm {
+  display: inline-block;
+  width: 200px;
+}
+.sinupPage .container .signupForm .form-group {
   max-width: 500px;
+  margin: 20px 0;
 }
-.sinupPage .signupForm .form-group .form-control {
+.sinupPage .container .signupForm .form-group .form-control {
   background: #f6f8fa;
+  width: 200px;
+}
+.sinupPage .container .signupForm .signupBtn {
+  padding: 12px;
+  width: 200px;
+  border-radius: 21px;
+  background: #4fddec;
+  color: #fff;
+  text-align: center;
+  border: none;
+  margin-top: 20px;
+  opacity: 1;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+.sinupPage .container .signupForm .signupBtn:hover {
+  opacity: 0.7;
 }
