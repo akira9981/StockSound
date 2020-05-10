@@ -18,78 +18,101 @@
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
     <link href="{{ asset('css/review.css') }}" rel="stylesheet">
     <link href="{{ asset('css/show.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/hamburger.css') }}" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
-                    {{ config('app.name') }}
-                </a>
-                <div class="navbar-menu">
-                    <ul class="navbar-nav">
+<header class="header">
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <img class='navbar-logo' src="{{ asset('images/logo.png') }}">
+                {{ config('app.name') }}
+            </a>
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="{{ route('create') }}" class='nav-link'>
+                            <i class="fas fa-edit"></i>
+                            <div class="nav-text">Review</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/" class='nav-link'>
+                            <i class="fas fa-music"></i>
+                            <div class="nav-text">Stock</div>
+                        </a>
+                    </li>
+                    @guest
                         <li class="nav-item">
-                            <a href="{{ route('create') }}" class='nav-link'>
-                                <i class="fas fa-edit"></i>
-                                <div class="nav-text">Review</div>
+                            <a class="nav-link" href="{{ route('login') }}">
+                                <i class="fas fa-door-open"></i>
+                                {{ __('Login') }}
                             </a>
                         </li>
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">
+                                    <i class="fas fa-user-plus"></i>
+                                    {{ __('Register') }}
+                                </a>
+                            </li>
+                        @endif
+                    @else
                         <li class="nav-item">
-                            <a href="/" class='nav-link'>
-                                <i class="fas fa-music"></i>
-                                <div class="nav-text">Stock</div>
+                            <a a href="/" class="nav-link">
+                                <i class="fas fa-user"></i>
+                                <div class="nav-text">User</div>
                             </a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-door-closed"></i>
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
                         </li>
+                    @endguest
+                </ul>
+                <div class="global-nav">
+                    <ul class="global-nav_list">
+                        <li class="global-nav_item"><a href="{{ route('create') }}">Review</a></li>
+                        <li class="global-nav_item"><a href="/">Stock</a></li>
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">
-                                    <i class="fas fa-door-open"></i>
-                                    {{ __('Login') }}
-                                </a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">
-                                        <i class="fas fa-user-plus"></i>
-                                        {{ __('Register') }}
-                                    </a>
-                                </li>
-                            @endif
+                        <li class="global-nav_item"><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                        @if (Route::has('register'))
+                        <li class="global-nav_item"><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                        @endif
                         @else
-                            <li class="nav-item">
-                                <a a href="/" class="nav-link">
-                                    <i class="fas fa-user"></i>
-                                    <div class="nav-text">User</div>
-                                </a>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                        <i class="fas fa-door-closed"></i>
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                        <li class="global-nav_item"><a href="/">User</a></li>
+                        <li class="global-nav_item"><a href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a></li>
                         @endguest
                     </ul>
                 </div>
+                <div class="hamburger" id="js-hamburger">
+                    <span class="hamburger_line1"></span>
+                    <span class="hamburger_line2"></span>
+                    <span class="hamburger_line3"></span>
+                </div>
+                <div class="black-bg" id="js-black-bg"></div>
             </div>
-        </nav>
-    </header>
-    <main class="main">
-    @if (session('flash_message'))
-            <div class="flash_message">
-                {{ session('flash_message') }}
-            </div>
-    @endif
-        @yield('content')
-    </main>
-    <footer class='footer'>
-    <div class='copyright'>StockSound 2020 copyright</div>
-    </footer>
+        </div>
+    </nav>
+</header>
+<main class="main">
+@if (session('flash_message'))
+        <div class="flash_message">
+            {{ session('flash_message') }}
+        </div>
+@endif
+    @yield('content')
+</main>
+<footer class='footer'>
+<div class='copyright'>StockSound 2020 copyright</div>
+</footer>
+<script src="{{ asset('js/hamburger.js') }}"></script>
 </body>
 </html>

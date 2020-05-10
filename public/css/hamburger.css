@@ -1,0 +1,105 @@
+.global-nav {
+  position: fixed;
+  right: -320px;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  padding-top: 40px;
+  background-color: #fff;
+  transition: all 0.6s;
+  z-index: 200;
+}
+.global-nav_list {
+  margin: 60px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+.global-nav_list a {
+  color: black;
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+}
+.global-nav_list a:hover {
+  background-color: #00b7cf;
+}
+.global-nav_item {
+  text-align: center;
+  padding: 0 14px;
+}
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  z-index: 300;
+  cursor: pointer;
+}
+.hamburger .hamburger_line1 {
+  display: inline-block;
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+  transition: all 0.6s;
+  top: 16px;
+}
+.hamburger .hamburger_line2 {
+  display: inline-block;
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+  transition: all 0.6s;
+  top: 22px;
+}
+.hamburger .hamburger_line3 {
+  display: inline-block;
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+  transition: all 0.6s;
+  top: 28px;
+}
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+.nav-open .global-nav {
+  right: 0;
+}
+.nav-open .black-bg {
+  opacity: 0.8;
+  visibility: visible;
+}
+.nav-open .hamburger_line1 {
+  transform: rotate(45deg);
+  background-color: black;
+  top: 20px;
+}
+.nav-open .hamburger_line2 {
+  width: 0;
+  left: 50%;
+}
+.nav-open .hamburger_line3 {
+  transform: rotate(-45deg);
+  background-color: black;
+  top: 20px;
+}
+@media screen and (min-width: 801px) {
+  .hamburger {
+    display: none;
+  }
+}

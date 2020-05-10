@@ -25,7 +25,6 @@
       position: absolute;
       right: 20px;
       .navbar-nav{
-        display: flex;
         margin: 10px 0 0 0;
         .nav-item{
           margin-left: 30px;
@@ -45,5 +44,17 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 801px){
+  .navbar-nav{
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .navbar-nav{
+    display: none;
   }
 }
