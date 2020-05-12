@@ -13,7 +13,7 @@
                 @endif
                 You are logged in!
             </div>
-            <p class="acountPage_link"><a href="{{ route('/') }}">TOP PAGE</a></p>
+            <a class="acountPage_link" href="{{ url('/') }}">TOP PAGE</a>
         </div>
     </div>
 </div>
