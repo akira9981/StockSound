@@ -4,7 +4,7 @@
 <div class="sinupPage">
   <div class="container">
     <div class="titleArea">
-      <h1>MemoList Sign up</h1>
+      <h1>StockSound Sign up</h1>
       <div class="m-3">or</div>
         <p class="acountPage_link"><a href="{{ route('login') }}">Sign in</a></p>
       </div>
