@@ -16,6 +16,7 @@
 }
 .show-contents .show-body .review-image {
   width: 100%;
+  overflow: scroll;
 }
 .show-contents .show-body .review-image .image {
   height: 500px;
