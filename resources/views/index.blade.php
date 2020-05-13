@@ -27,7 +27,7 @@
   @foreach($reviews as $review)
     <div class="card-body">
         @if(!empty($review->image))
-        <div class='image-wrapper'><img class='review-image' src="{{ asset('storage/images/'.$review->image) }}"></div>
+        <div class='image-wrapper'><img class='review-image' src={{ $review->image }}></div>
         @else
         <div class='image-wrapper'><img class='review-image' src="{{ asset('images/noimage.jpg') }}"></div>
         @endif

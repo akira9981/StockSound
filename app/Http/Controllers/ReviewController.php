@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Review;
+use Storage;
 
 class ReviewController extends Controller
 {
@@ -35,13 +36,14 @@ class ReviewController extends Controller
         ]);
 
             if ($request->hasFile('image')) {
-                  $request->file('image')->store('/public/images');
-                  $data = ['user_id' => \Auth::id(), 'title' => $post['title'], 'body' => $post['body'], 'image' => $request->file('image')->hashName()];
-                  } else {
-                      $data = ['user_id' => \Auth::id(), 'title' => $post['title'], 'body' => $post['body']];
-                  }
-                  Review::insert($data);
+                $image = $request->file('image');
+                $path = Storage::disk('s3')->put('/', $image, 'public');
+                $data = ['user_id' => \Auth::id(), 'title' => $post['title'], 'body' => $post['body'], 'image' => $image->path = Storage::disk('s3')->url($path)];
+            } else {
+                $data = ['user_id' => \Auth::id(), 'title' => $post['title'], 'body' => $post['body']];
+            }
+            Review::insert($data);
 
-                  return redirect('/')->with('flash_message', '投稿が完了しました');
+            return redirect('/')->with('flash_message', '投稿が完了しました');
     }
 }

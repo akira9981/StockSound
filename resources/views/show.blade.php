@@ -6,7 +6,7 @@
   <div class="show-body">
     <div class='review-image'>
       @if(!empty($review->image))
-      <img class='image' src="{{ asset('storage/images/'.$review->image) }}">
+      <img class='image' src={{ $review->image }}>
       @else
       <img class='image' src="{{ asset('images/noimage.jpg') }}">
       @endif
